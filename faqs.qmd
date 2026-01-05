@@ -8,9 +8,27 @@ output:
 Add something here that is like a TOC/overview of the errors that are covered in this doc.
   --->
 
+
+## Search on OTTR docs
+
+Search on the OTTR docs for what you are looking for. Note that first few entries are sponsored, the actually helpful stuff will be below that.
+
+<script async src="https://cse.google.com/cse.js?cx=22c03a049bf7a472a">
+</script>
+<div class="gcse-searchbox-only"></div>
+
 ## Most Common Errors
 
 This guide will describe the most common OTTR errors and pitfalls and how to address them.
+
+### Most Common Errors: Content not rendering or updating as expected.
+
+* Check that the GitHub repository `GH_PAT` is up to date. (An associated GitHub Actions error that suggests the `GH_PAT` needs to be udpated is an `exit code 128`)
+* Check that the config file is up-to-date. It should look like this: https://github.com/ottrproject/OTTR_Template/blob/main/config_automation.yml.
+(be careful to keep your selections for the configuration you would like).
+
+### Most Common Errors: Pull request checks failing
+
 When you open a pull request, you should see a report like this:
 
 ![](https://github.com/ottrproject/OTTR_Template/raw/main/resources/screenshots/gha-actions-error.png)
@@ -39,6 +57,38 @@ _What does this mean?:_
 Your Google Slides presentation you have tried to retrieve a slide from with `ottrpal::include_slide()` is not public. Your Google Slide document must be set to `Anyone with a link`. See [this article for more details.](https://support.wix.com/en/article/setting-permissions-for-google-drive-files-and-folders#:~:text=Settings%20Permissions%20for%20a%20Google,edit%20and%20comment%20as%20well.) The renders will fail if this is not set! See the [setting up images and graphics section](https://www.ottrproject.org/writing_content_courses.html#set-up-images) for more details.
 
 ***
+
+
+#### You observe the code for `include_slide()` or `<img src="...", ... >` rather than the Google Slide image. 
+
+Check the formatting of the code chunk, particularly paying attention to the `fig.alt` argument. 
+
+Make sure there are: 
+
+- no line breaks
+- only **one type** of quotation marks used in `fig.alt` (either all single or all double quotes)
+
+Examples:
+
+`fig.alt = "This is an example sentence where I want to bring attention to "this specific phrase" and not the rest of it."` 
+
+or 
+
+`fig.alt = 'This is an example sentence where I want to bring attention to 'this specific phrase' and not the rest of it.'`
+
+<details><summary>Click for more information</summary>
+Options for correct formatting of quotation marks within the `fig.alt` text argument:
+
+	    - Double quotation marks surrounding the whole argument with double quotation marks around any specific phrases within the argument
+	    - Single quotation marks surround the whole argument with single quotation marks around any specific phrases within the argument
+	    - Double quotation marks surrounding the whole argument with single quotation marks around any specific phrases within the argument (this will also work)
+
+Note: Single quotation marks surrounding the whole argument with double quotation marks around specific phrases within the argument will cause issues that may be not be as obvious at first. It will cause the images to not be properly rendered.
+</details> 
+
+
+***
+
 
 ### `Process completed with exit code 1.`: Spell check/url check/quiz format fail:
 
