@@ -27,6 +27,9 @@ This guide will describe the most common OTTR errors and pitfalls and how to add
 * Check that the config file is up-to-date. It should look like this: https://github.com/ottrproject/OTTR_Template/blob/main/config_automation.yml.
 (be careful to keep your selections for the configuration you would like).
 
+* Your workflow files may be out of date compared to the template and you may need to request a sync by opening an issue in the template repository.
+
+
 ### Most Common Errors: Pull request checks failing
 
 When you open a pull request, you should see a report like this:
