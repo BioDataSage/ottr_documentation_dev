@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -41,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-18709e3a1b432fbe2ef48780f708a533.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -228,6 +263,11 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#highly-recommended-next-steps" id="toc-highly-recommended-next-steps" class="nav-link" data-scroll-target="#highly-recommended-next-steps">Highly Recommended Next Steps</a>
   <ul>
+  <li><a href="#clean-out-template-placeholder-files" id="toc-clean-out-template-placeholder-files" class="nav-link" data-scroll-target="#clean-out-template-placeholder-files">Clean out template placeholder files</a></li>
+  <li><a href="#update-the-readme" id="toc-update-the-readme" class="nav-link" data-scroll-target="#update-the-readme">Update the README</a></li>
+  <li><a href="#add-a-license" id="toc-add-a-license" class="nav-link" data-scroll-target="#add-a-license">Add a license</a></li>
+  <li><a href="#add-your-repository-link-to-the-sidebar" id="toc-add-your-repository-link-to-the-sidebar" class="nav-link" data-scroll-target="#add-your-repository-link-to-the-sidebar">Add your repository link to the sidebar</a></li>
+  <li><a href="#set-up-a-feedback-channel" id="toc-set-up-a-feedback-channel" class="nav-link" data-scroll-target="#set-up-a-feedback-channel">Set up a feedback channel</a></li>
   <li><a href="#giving-credits-to-contributors" id="toc-giving-credits-to-contributors" class="nav-link" data-scroll-target="#giving-credits-to-contributors">Giving credits to contributors</a></li>
   <li><a href="#citing-sources" id="toc-citing-sources" class="nav-link" data-scroll-target="#citing-sources">Citing sources</a></li>
   <li><a href="#setting-up-google-analytics" id="toc-setting-up-google-analytics" class="nav-link" data-scroll-target="#setting-up-google-analytics">Setting up Google Analytics</a></li>
@@ -346,6 +386,73 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="highly-recommended-next-steps" class="level2">
 <h2 class="anchored" data-anchor-id="highly-recommended-next-steps">Highly Recommended Next Steps</h2>
+<section id="clean-out-template-placeholder-files" class="level3">
+<h3 class="anchored" data-anchor-id="clean-out-template-placeholder-files">Clean out template placeholder files</h3>
+<p>The OTTR template ships with example content files to show you the structure. Once you’re ready to start writing, replace these with your own content.</p>
+<p><strong>Safe to delete:</strong></p>
+<ul>
+<li>Example chapter files (e.g., <code>01-intro.Rmd</code>, <code>02-chapter_of_course.Rmd</code>, <code>03-chapter_of_course.Rmd</code>)</li>
+<li><code>index.Rmd</code> placeholder text (edit in place rather than deleting)</li>
+<li>Any images in <code>resources/images/</code> that were part of the example content</li>
+</ul>
+<p><strong>Do NOT delete:</strong></p>
+<ul>
+<li>Anything inside <code>.github/workflows/</code> — these run all the automated checks and rendering</li>
+<li><code>assets/</code> — contains styling files</li>
+<li><code>resources/</code> — contains the spell-check dictionary and screenshot helpers</li>
+<li>Configuration files: <code>_bookdown.yml</code>, <code>_output.yml</code>, <code>book.bib</code>, <code>_quarto.yml</code></li>
+</ul>
+</section>
+<section id="update-the-readme" class="level3">
+<h3 class="anchored" data-anchor-id="update-the-readme">Update the README</h3>
+<p>The <code>README.md</code> in your repository comes with template placeholder text. Update it to describe what your course or website is about, who it’s for, and how to contribute or report issues. A clear README helps collaborators and visitors understand your project at a glance.</p>
+<p>At minimum, update:</p>
+<ul>
+<li>The title and description</li>
+<li>Any links that point to the template repository (replace with your own repo URL)</li>
+<li>Author and contact information</li>
+</ul>
+</section>
+<section id="add-a-license" class="level3">
+<h3 class="anchored" data-anchor-id="add-a-license">Add a license</h3>
+<p>Adding a license to your repository clarifies how others can use and share your content. For open educational resources, <a href="https://choosealicense.com/licenses/cc-by-4.0/">Creative Commons Attribution 4.0 (CC BY 4.0)</a> is a common choice — it allows reuse with attribution.</p>
+<p>To add a license on GitHub:</p>
+<ol type="1">
+<li>Go to your repository’s main page.</li>
+<li>Click <strong>Add file</strong> &gt; <strong>Create new file</strong> and name it <code>LICENSE</code>.</li>
+<li>GitHub will offer a license picker — select your preferred license and commit.</li>
+</ol>
+</section>
+<section id="add-your-repository-link-to-the-sidebar" class="level3">
+<h3 class="anchored" data-anchor-id="add-your-repository-link-to-the-sidebar">Add your repository link to the sidebar</h3>
+<p>Linking your GitHub repository from the sidebar makes it easy for readers to find the source, suggest edits, or file issues.</p>
+<p>For <strong>R Markdown courses</strong>, update <code>_output.yml</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="at">bookdown:</span><span class="fu">:gitbook</span><span class="kw">:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">config</span><span class="kw">:</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">edit</span><span class="kw">:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">link</span><span class="kw">:</span><span class="at"> https://github.com/YOUR-ORG/YOUR-REPO/edit/main/%s</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"Suggest an edit"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">download</span><span class="kw">:</span><span class="at"> </span><span class="ch">no</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">sharing</span><span class="kw">:</span><span class="at"> </span><span class="ch">no</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>For <strong>Quarto</strong>, update <code>_quarto.yml</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">repo-url</span><span class="kw">:</span><span class="at"> https://github.com/YOUR-ORG/YOUR-REPO</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">repo-actions</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">edit</span><span class="kw">,</span><span class="at"> issue</span><span class="kw">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Replace <code>YOUR-ORG/YOUR-REPO</code> with your actual organization and repository name.</p>
+</section>
+<section id="set-up-a-feedback-channel" class="level3">
+<h3 class="anchored" data-anchor-id="set-up-a-feedback-channel">Set up a feedback channel</h3>
+<p>Making it easy for learners to report problems or leave feedback improves your course over time. Two good approaches:</p>
+<p><strong>GitHub issue templates</strong> — add structured issue forms so readers can report content errors, broken links, or general feedback directly from your repo. You can use <a href="https://github.com/ottrproject/OTTR_Template/tree/main/.github/ISSUE_TEMPLATE">OTTR’s example issue templates</a> as a starting point.</p>
+<p><strong>Google Form link</strong> — for audiences less familiar with GitHub, add a feedback Google Form link to your course. In <code>_output.yml</code>, you can surface this in the sharing config:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="at">bookdown:</span><span class="fu">:gitbook</span><span class="kw">:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">config</span><span class="kw">:</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">sharing</span><span class="kw">:</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">facebook</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">twitter</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">all</span><span class="kw">:</span><span class="at"> </span><span class="kw">[]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then add a direct link to your form in <code>index.Rmd</code> or your course footer. For automated responses, <a href="https://zapier.com">Zapier</a> can connect Google Form submissions to email notifications, Slack alerts, or GitHub issues.</p>
+</section>
 <section id="giving-credits-to-contributors" class="level3">
 <h3 class="anchored" data-anchor-id="giving-credits-to-contributors">Giving credits to contributors</h3>
 <p>OTTR courses include a credits table to acknowledge everyone who contributed — instructors, editors, publishers, and template engineers. For full instructions, see the <a href="./more_features_credits.html">Giving Credits page</a>.</p>

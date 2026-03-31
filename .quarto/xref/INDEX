@@ -1,0 +1,62 @@
+{
+  "git_actions.qmd": {
+    "git_actions.html": "bfbd717e"
+  },
+  "more_features_ganalytic.qmd": {
+    "more_features_ganalytic.html": "10958353"
+  },
+  "more_features_sources.qmd": {
+    "more_features_sources.html": "d58266a8"
+  },
+  "more_features_gdoc.qmd": {
+    "more_features_gdoc.html": "f73a2f8d"
+  },
+  "examples.qmd": {
+    "examples.html": "160051b5"
+  },
+  "getting_started.qmd": {
+    "getting_started.html": "27cd0ccc"
+  },
+  "customize-robots.qmd": {
+    "customize-robots.html": "3eddfe8b"
+  },
+  "more_features_credits.qmd": {
+    "more_features_credits.html": "c77e6eb2"
+  },
+  "index.qmd": {
+    "index.html": "735f7f6c"
+  },
+  "ottr-fy.qmd": {
+    "ottr-fy.html": "6b17f5cf"
+  },
+  "choose_template.qmd": {
+    "choose_template.html": "ca6d57d8"
+  },
+  "setup.qmd": {
+    "setup.html": "4329e37c"
+  },
+  "more_features_borrowing.qmd": {
+    "more_features_borrowing.html": "5775073e"
+  },
+  "customize-docker.qmd": {
+    "customize-docker.html": "d2cc358f"
+  },
+  "customize-style.qmd": {
+    "customize-style.html": "74d5a331"
+  },
+  "faqs.qmd": {
+    "faqs.html": "89a9127e"
+  },
+  "contact.qmd": {
+    "contact.html": "7870945e"
+  },
+  "style.qmd": {
+    "style.html": "7c7c5b7a"
+  },
+  "enroll_sync.qmd": {
+    "enroll_sync.html": "e072fbe2"
+  },
+  "next_steps.qmd": {
+    "next_steps.html": "db8d9179"
+  }
+}
